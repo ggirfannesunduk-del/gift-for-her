@@ -130,6 +130,46 @@ const photosData = {
         vi: "Ánh sáng chiều tối này, chiếc váy này, ánh mắt này... Em như một bức tranh của danh họa.",
         en: "This evening light, this dress, this look... You're like a masterpiece painting."
       }
+    },
+    {
+      src: "2b.jpg",
+      descriptions: {
+        ru: "Немного загадочная, немного задумчивая. И безумно красивая.",
+        vi: "Một chút bí ẩn, một chút trầm tư. Và đẹp vô cùng.",
+        en: "A little mysterious, a little thoughtful. And incredibly beautiful."
+      }
+    },
+    {
+      src: "3b.jpg",
+      descriptions: {
+        ru: "Ты подставляешь лицо солнцу, и в этот момент я завидую солнечному свету.",
+        vi: "Em đưa mặt đón nắng, và ngay lúc đó anh ghen tị với ánh nắng mặt trời.",
+        en: "You lift your face to the sun, and in that moment I envy the sunlight."
+      }
+    },
+    {
+      src: "4b.jpg",
+      descriptions: {
+        ru: "Твой профиль, твой взгляд вдаль. Я мог бы смотреть на это бесконечно.",
+        vi: "Góc nghiêng của em, ánh mắt nhìn xa xăm. Anh có thể nhìn mãi không chán.",
+        en: "Your profile, your gaze into the distance. I could look at this forever."
+      }
+    },
+    {
+      src: "5b.jpg",
+      descriptions: {
+        ru: "Ты протягиваешь мне руку. И я готов идти за тобой куда угодно.",
+        vi: "Em đưa tay về phía anh. Và anh sẵn sàng đi theo em đến bất cứ đâu.",
+        en: "You reach out your hand to me. And I'm ready to follow you anywhere."
+      }
+    },
+    {
+      src: "6b.jpg",
+      descriptions: {
+        ru: "Один из тех дней, которые хочется сохранить подольше.",
+        vi: "Một trong những ngày mà anh muốn giữ lại lâu hơn.",
+        en: "One of those days I want to hold on to a little longer."
+      }
     }
   ]
 };
