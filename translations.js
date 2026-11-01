@@ -121,7 +121,7 @@ const photosData = {
       }
     }
   ],
-  best: [
+   best: [
     {
       src: "1b.jpg",
       descriptions: {
