@@ -1,13 +1,11 @@
 // ==================================================
-// НАСТРОЙКИ — меняй под себя!
+// НАСТРОЙКИ
 // ==================================================
-
 const SITE_PASSWORD = "love";
 
 // ==================================================
 // ТЕКСТЫ
 // ==================================================
-
 const translations = {
   ru: {
     mainTitle: "Самая красивая вьетнамка в Китае",
@@ -28,7 +26,7 @@ const translations = {
 
 Я не буду говорить громких слов — ты и так всё чувствуешь. Просто хочу, чтобы ты знала: рядом с тобой мне спокойно. И это, наверное, самое ценное, что вообще бывает.
 
-Спасибо, что ты есть.`,
+Спасибо, что ты есть.`
   },
   vi: {
     mainTitle: "Người Việt xinh đẹp nhất ở Trung Quốc",
@@ -49,7 +47,7 @@ Anh thường bắt gặp mình chỉ ngồi nhìn em. Cách em cau mày khi có
 
 Anh sẽ không nói những lời to tát — em vốn đã cảm nhận được rồi. Anh chỉ muốn em biết: ở bên em, anh thấy bình yên. Và đó có lẽ là điều quý giá nhất trên đời.
 
-Cảm ơn em, vì em đã đến.`,
+Cảm ơn em, vì em đã đến.`
   },
   en: {
     mainTitle: "The Most Beautiful Vietnamese Girl in China",
@@ -70,14 +68,13 @@ I often catch myself just watching you. The way you frown when something doesn't
 
 I won't say big words — you already feel them anyway. I just want you to know: next to you, I feel calm. And that, maybe, is the most precious thing there is.
 
-Thank you for being here.`,
+Thank you for being here.`
   }
 };
 
 // ==================================================
 // ФОТО
 // ==================================================
-
 const photosData = {
   general: [
     {
@@ -121,7 +118,7 @@ const photosData = {
       }
     }
   ],
-   best: [
+  best: [
     {
       src: "1b.jpg",
       descriptions: {
