@@ -82,7 +82,7 @@ Thank you for being here.`,
 const photosData = {
   general: [
     {
-      src: "photos/general/1.jpg",
+      src: "1g.jpg",
       descriptions: {
         ru: "Даже когда ты просто смотришь в телефон, мир вокруг как будто замирает.",
         vi: "Ngay cả khi em chỉ nhìn vào điện thoại, thế giới xung quanh dường như ngừng lại.",
@@ -90,7 +90,7 @@ const photosData = {
       }
     },
     {
-      src: "photos/general/2.jpg",
+      src: "2g.jpg",
       descriptions: {
         ru: "Ты смотришь на воду, а я смотрю на тебя. И мне этого достаточно.",
         vi: "Em nhìn xuống nước, còn anh nhìn em. Và thế là đủ.",
@@ -98,7 +98,7 @@ const photosData = {
       }
     },
     {
-      src: "photos/general/3.jpg",
+      src: "3g.jpg",
       descriptions: {
         ru: "Люблю моменты, когда ты о чём-то задумываешься. В такие секунды ты особенно настоящая.",
         vi: "Anh thích những lúc em đang suy nghĩ điều gì đó. Những giây phút ấy em thật đến lạ.",
@@ -106,7 +106,7 @@ const photosData = {
       }
     },
     {
-      src: "photos/general/4.jpg",
+      src: "4g.jpg",
       descriptions: {
         ru: "Ветер в волосах и солнце на лице. Обычный день, который стал любимым.",
         vi: "Gió trong tóc và nắng trên mặt. Một ngày bình thường đã trở thành ngày anh thích nhất.",
@@ -114,7 +114,7 @@ const photosData = {
       }
     },
     {
-      src: "photos/general/5.jpg",
+      src: "5g.jpg",
       descriptions: {
         ru: "Твоя улыбка здесь — как это море. Такая же светлая и бескрайняя.",
         vi: "Nụ cười của em ở đây giống như biển vậy. Tươi sáng và vô tận.",
@@ -124,43 +124,11 @@ const photosData = {
   ],
   best: [
     {
-      src: "photos/best/2.jpg",
+      src: "1b.jpg",
       descriptions: {
         ru: "Этот вечерний свет, это платье, этот взгляд... Ты как картина великого художника.",
         vi: "Ánh sáng chiều tối này, chiếc váy này, ánh mắt này... Em như một bức tranh của danh họa.",
         en: "This evening light, this dress, this look... You're like a masterpiece painting."
-      }
-    },
-    {
-      src: "photos/best/3.jpg",
-      descriptions: {
-        ru: "Немного загадочная, немного задумчивая. И безумно красивая.",
-        vi: "Một chút bí ẩn, một chút trầm tư. Và đẹp vô cùng.",
-        en: "A little mysterious, a little thoughtful. And incredibly beautiful."
-      }
-    },
-    {
-      src: "photos/best/4.jpg",
-      descriptions: {
-        ru: "Ты подставляешь лицо солнцу, и в этот момент я завидую солнечному свету.",
-        vi: "Em đưa mặt đón nắng, và ngay lúc đó anh ghen tị với ánh nắng mặt trời.",
-        en: "You lift your face to the sun, and in that moment I envy the sunlight."
-      }
-    },
-    {
-      src: "photos/best/5.jpg",
-      descriptions: {
-        ru: "Твой профиль, твой взгляд вдаль. Я мог бы смотреть на это бесконечно.",
-        vi: "Góc nghiêng của em, ánh mắt nhìn xa xăm. Anh có thể nhìn mãi không chán.",
-        en: "Your profile, your gaze into the distance. I could look at this forever."
-      }
-    },
-    {
-      src: "photos/best/6.jpg",
-      descriptions: {
-        ru: "Ты протягиваешь мне руку. И я готов идти за тобой куда угодно.",
-        vi: "Em đưa tay về phía anh. Và anh sẵn sàng đi theo em đến bất cứ đâu.",
-        en: "You reach out your hand to me. And I'm ready to follow you anywhere."
       }
     }
   ]
