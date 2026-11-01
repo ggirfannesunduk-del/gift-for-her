@@ -2,7 +2,6 @@
 // НАСТРОЙКИ — меняй под себя!
 // ==================================================
 
-// Пароль для входа (регистр имеет значение!)
 const SITE_PASSWORD = "love";
 
 // ==================================================
@@ -82,7 +81,7 @@ Thank you for being here.`,
 const photosData = {
   general: [
     {
-      src: "1g.jpg",
+      src: "2g.jpg",
       descriptions: {
         ru: "Даже когда ты просто смотришь в телефон, мир вокруг как будто замирает.",
         vi: "Ngay cả khi em chỉ nhìn vào điện thoại, thế giới xung quanh dường như ngừng lại.",
@@ -90,7 +89,7 @@ const photosData = {
       }
     },
     {
-      src: "2g.jpg",
+      src: "3g.jpg",
       descriptions: {
         ru: "Ты смотришь на воду, а я смотрю на тебя. И мне этого достаточно.",
         vi: "Em nhìn xuống nước, còn anh nhìn em. Và thế là đủ.",
@@ -98,7 +97,7 @@ const photosData = {
       }
     },
     {
-      src: "3g.jpg",
+      src: "4g.jpg",
       descriptions: {
         ru: "Люблю моменты, когда ты о чём-то задумываешься. В такие секунды ты особенно настоящая.",
         vi: "Anh thích những lúc em đang suy nghĩ điều gì đó. Những giây phút ấy em thật đến lạ.",
@@ -106,7 +105,7 @@ const photosData = {
       }
     },
     {
-      src: "4g.jpg",
+      src: "5g.jpg",
       descriptions: {
         ru: "Ветер в волосах и солнце на лице. Обычный день, который стал любимым.",
         vi: "Gió trong tóc và nắng trên mặt. Một ngày bình thường đã trở thành ngày anh thích nhất.",
@@ -114,7 +113,7 @@ const photosData = {
       }
     },
     {
-      src: "5g.jpg",
+      src: "6g.jpg",
       descriptions: {
         ru: "Твоя улыбка здесь — как это море. Такая же светлая и бескрайняя.",
         vi: "Nụ cười của em ở đây giống như biển vậy. Tươi sáng và vô tận.",
