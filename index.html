@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gửi em ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== ПАРОЛЬНЫЙ ЭКРАН ====== -->
+  <div class="lock-screen" id="lockScreen">
+    <div class="lock-box">
+      <div class="lock-icon">🔒</div>
+      <h2 id="lockTitle">Введи пароль, чтобы войти</h2>
+      <input type="password" id="passwordInput" placeholder="••••••" autocomplete="off">
+      <button id="unlockBtn">Войти 💖</button>
+      <p class="lock-error" id="lockError"></p>
+    </div>
+  </div>
+
+  <!-- ====== ОСНОВНОЙ САЙТ ====== -->
+  <div class="site" id="siteContent">
+
+    <!-- Фоновая музыка -->
+    <audio id="bgMusic" loop preload="auto">
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="musicBtn" title="Музыка">🔇</button>
+
+    <!-- Переключатель языков -->
+    <div class="lang-switcher">
+      <button data-lang="ru" class="active">RU</button>
+      <button data-lang="vi">VI</button>
+      <button data-lang="en">EN</button>
+    </div>
+
+    <!-- Главный заголовок с фоновым фото -->
+    <header class="hero" style="background-image: url('photos/best/1.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 id="mainTitle">Самая красивая вьетнамка в Китае</h1>
+        <div class="hearts">💖</div>
+      </div>
+    </header>
+
+    <!-- Вкладки -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="general" id="tabGeneral">Сборник общих фото</button>
+      <button class="tab-btn" data-tab="best" id="tabBest">Лучшие фотографии</button>
+      <button class="tab-btn" data-tab="letter" id="tabLetter">Кое-что для тебя</button>
+    </nav>
+
+    <!-- Вкладка: общие фото -->
+    <section class="tab-content active" id="general">
+      <div class="gallery" id="generalGallery"></div>
+    </section>
+
+    <!-- Вкладка: лучшие фото -->
+    <section class="tab-content" id="best">
+      <div class="gallery" id="bestGallery"></div>
+    </section>
+
+    <!-- Вкладка: письмо -->
+    <section class="tab-content" id="letter">
+      <div class="letter-box">
+        <div class="letter-paper">
+          <h2 id="letterTitle">Тихо, только для тебя</h2>
+          <div id="letterBody"></div>
+          <p class="letter-sign" id="letterSign">— всегда рядом</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Модальное окно для просмотра фото -->
+  <div class="modal" id="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg" src="" alt="">
+    <p id="modalDesc"></p>
+  </div>
+
+  <!-- Контейнер для лепестков -->
+  <div class="petals" id="petals"></div>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

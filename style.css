@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Helvetica', sans-serif;
+  background: linear-gradient(135deg, #ffe0ec 0%, #ffd1e8 50%, #ffc2dc 100%);
+  min-height: 100vh;
+  color: #4a1e2e;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+}
+
+/* ================= ПАРОЛЬНЫЙ ЭКРАН ================= */
+.lock-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ffb6d5 0%, #ff8fbf 50%, #ff6fa5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.lock-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.lock-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 40px 30px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(214, 51, 108, 0.35);
+  animation: fadeInDown 0.8s ease;
+}
+
+.lock-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite;
+}
+
+.lock-box h2 {
+  font-size: 1.15rem;
+  color: #d6336c;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.lock-box input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #ffb6d5;
+  border-radius: 30px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s;
+  margin-bottom: 15px;
+  background: #fff5fa;
+}
+
+.lock-box input:focus {
+  border-color: #ff6fa5;
+}
+
+.lock-box button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff6fa5, #d6336c);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lock-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(214, 51, 108, 0.4);
+}
+
+.lock-error {
+  color: #d6336c;
+  margin-top: 12px;
+  font-size: 14px;
+  min-height: 20px;
+  font-weight: 600;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+.lock-box.shake {
+  animation: shake 0.4s;
+}
+
+/* ================= ОСНОВНОЙ САЙТ ================= */
+.site {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.site.visible {
+  opacity: 1;
+}
+
+/* Кнопка музыки */
+.music-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid #ff6fa5;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  background: #ff6fa5;
+}
+
+.music-btn.playing {
+  background: #ff6fa5;
+  animation: pulse 1.5s infinite;
+}
+
+/* Переключатель языков */
+.lang-switcher {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 6px;
+  z-index: 100;
+}
+
+.lang-switcher button {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #ff6fa5;
+  color: #d6336c;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.lang-switcher button:hover {
+  background: #ff6fa5;
+  color: #fff;
+}
+
+.lang-switcher button.active {
+  background: #ff6fa5;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Заголовок с фото */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 140px 20px 100px;
+  background-size: cover;
+  background-position: center 30%;
+  background-attachment: fixed;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 182, 213, 0.3) 0%, rgba(255, 143, 191, 0.7) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 6vw, 3.5rem);
+  color: #fff;
+  text-shadow: 0 4px 15px rgba(214, 51, 108, 0.8);
+  font-weight: 800;
+  line-height: 1.3;
+  animation: fadeInDown 1s ease;
+}
+
+.hearts {
+  font-size: 2.2rem;
+  margin-top: 10px;
+  animation: pulse 2s infinite;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+}
+
+/* Вкладки */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  margin-top: -30px; /* Поднимаем вкладки немного на фото */
+  position: relative;
+  z-index: 3;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ff6fa5;
+  color: #d6336c;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(214, 51, 108, 0.15);
+}
+
+.tab-btn:hover {
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: #ff6fa5;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(255, 111, 165, 0.4);
+}
+
+/* Вкладки — контент */
+.tab-content {
+  display: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  animation: fadeIn 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Галерея */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.gallery .photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(214, 51, 108, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery .photo-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(214, 51, 108, 0.3);
+}
+
+.gallery .photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery .photo-card::after {
+  content: '❤️';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 20px;
+}
+
+.gallery .photo-card:hover::after {
+  opacity: 1;
+}
+
+/* ================= ПИСЬМО ================= */
+.letter-box {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 10px 5px 40px;
+}
+
+.letter-paper {
+  background: linear-gradient(180deg, #fffafc 0%, #fff3f8 100%);
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 15px 40px rgba(214, 51, 108, 0.2);
+  position: relative;
+  border: 1px solid #ffd6e7;
+}
+
+.letter-paper::before {
+  content: '💌';
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 42px;
+  background: #fff;
+  padding: 0 12px;
+  border-radius: 50%;
+}
+
+.letter-paper h2 {
+  color: #d6336c;
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+}
+
+#letterBody {
+  color: #5a2635;
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  line-height: 1.85;
+  white-space: pre-line;
+  text-align: left;
+}
+
+.letter-sign {
+  text-align: right;
+  margin-top: 25px;
+  color: #d6336c;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+/* ================= МОДАЛЬНОЕ ОКНО ================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 10, 20, 0.92);
+  z-index: 500;
+  padding: 20px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.modal.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal img {
+  max-width: 95%;
+  max-height: 70vh;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+.modal #modalDesc {
+  color: #fff;
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 16px;
+  line-height: 1.6;
+  background: rgba(255, 111, 165, 0.25);
+  padding: 18px 22px;
+  border-radius: 14px;
+  border-left: 4px solid #ff6fa5;
+  text-align: left;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.close:hover {
+  transform: scale(1.2);
+}
+
+/* ================= ЛЕПЕСТКИ ================= */
+.petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  font-size: 20px;
+  opacity: 0.85;
+  animation: fall linear infinite;
+  user-select: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-40px) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.9; }
+  90% { opacity: 0.9; }
+  100% {
+    transform: translateY(105vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ================= АНИМАЦИИ ================= */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ================= МОБИЛЬНЫЕ ================= */
+@media (max-width: 600px) {
+  .hero { padding: 100px 15px 70px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .tab-btn { padding: 10px 14px; font-size: 12.5px; }
+  .modal #modalDesc { font-size: 14px; padding: 14px 16px; }
+  .letter-paper { padding: 30px 20px; }
+  .music-btn { width: 40px; height: 40px; font-size: 17px; }
+  .lock-box { padding: 30px 22px; }
+}
