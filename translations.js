@@ -162,14 +162,6 @@ const photosData = {
         vi: "Em đưa tay về phía anh. Và anh sẵn sàng đi theo em đến bất cứ đâu.",
         en: "You reach out your hand to me. And I'm ready to follow you anywhere."
       }
-    },
-    {
-      src: "6b.jpg",
-      descriptions: {
-        ru: "Один из тех дней, которые хочется сохранить подольше.",
-        vi: "Một trong những ngày mà anh muốn giữ lại lâu hơn.",
-        en: "One of those days I want to hold on to a little longer."
-      }
     }
   ]
 };
